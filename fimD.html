@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Título</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background: #D3D3D3;
+		}
+
+		#rel{
+			position: absolute;
+			top:0%;
+			left: 50%;
+			transform: translateY(-50%);
+			transform: translateX(-50%);
+			text-align: center;
+			background-color: #4dd;
+			color:#a0e;
+			font-size: 30px;
+			width: auto;
+			height: 33px;
+			border-radius: 10px;
+		}
+
+		#dv1{
+			position: absolute;
+			top: 50px;
+			left: 2%;
+			width: 96%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv2{
+			position: absolute;
+			top: 360px;
+			left: 2%;
+			width: 48%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv3{
+			position: absolute;
+			top: 360px;
+			left: 52%;
+			width: 46%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv4{
+			position: absolute;
+			top: 666px;
+			left: 2%;
+			width: 48%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv5{
+			position: absolute;
+			top: 666px;
+			left: 52%;
+			width: 46%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv6{
+			position: absolute;
+			top: 972px;
+			left: 2%;
+			width: 48%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+		#dv7{
+			position: absolute;
+			top: 972px;
+			left: 52%;
+			width: 46%;
+			height: 300px;
+			border: 1px solid #000;
+			//background-color: #000;
+			font-size: 30px;
+		}
+
+		@media screen and (max-width: 450px){
+			#dv2{
+				position: absolute;
+				top: 360px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;
+			}
+			#dv3{
+				position: absolute;
+				top: 666px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;
+			}
+			#dv4{
+				position: absolute;
+				top: 972px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;	
+			}
+			#dv5{
+				position: absolute;
+				top: 1278px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;
+			}
+			#dv6{
+				position: absolute;
+				top: 1584px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;
+			}
+			#dv7{
+				position: absolute;
+				top: 1900px;
+				left: 2%;
+				width: 90%;
+				height: 300px;
+				border: 1px solid #000;
+				//background-color: #000;
+				font-size: 30px;
+			}
+		}
+	</style>
+
+	<script type="text/javascript">
+		var data;
+		var hora;
+		var minuto;
+		var segundo;
+
+		function relogio() {
+
+			data=new Date();
+
+			hora=data.getHours();
+			minuto=data.getMinutes();
+			segundo=data.getSeconds();
+
+			if(hora<10){
+				hora="0" + hora;
+			}
+			if(minuto<10){
+				minuto="0" + minuto;
+			}
+			if(segundo<10){
+				segundo="0" + segundo;
+			}
+
+			horas=hora+":"+minuto+":"+segundo;
+			
+			document.getElementById("rel").value=horas;
+
+			var Btrat;
+			var horaMax=23+":"+59+":"+59;
+			tratamento();
+			
+
+			
+		}
+
+		function tratamento(){
+			if((hora>0) || (hora<6)){
+				Btrat="Booa Noite Amor!";
+			}else if((hora>6)|| (hora<12)){
+				Btrat="Boom Diaa Amor!";
+			}else if((hora>12) || (hora<18)){
+				Btrat="Booa Tarde Amor!";
+			}else if((hora>18) || (horas<horaMax)){
+				Btrat="Booa Noite Amor!";
+			}
+
+			document.getElementById("dv1").innerHTML=Btrat+" Sei que não sou o melhor namorado e que não tivemos tudo que gostariamos ter juntos e nem só do ótimo, porém amei ser seu e amei que seja minha, e espero que esses 10 meses se transforme em 10 anos e até mais que o quintuplo de 10 anos! Eu lhe AMO Lara Delamari ❤️ e desejo passar o resto da vida com você!!! Feliz 10 meses de Namoro!!!!";
+		}
+		var tempo=setInterval(relogio,1000);
+		
+	
+
+	</script>
+
+</head>
+<body>
+
+	<input type="text" id="rel">
+
+	<div id="dv1">
+		
+
+	</div>
+
+<div id="dv2">
+		<video width="650px" height="300px" controls> 
+			<source src="eu/eu1.mp4" type="video/mp4">
+		</video>
+
+	</div>
+	<div id="dv3" align="center">
+		<img src="eu/eu2.jpg" width="600px" height="300px">
+
+	</div>
+	<div id="dv4" align="center">
+		<img src="eu/eu3.jpg" width="600px" height="300px">
+
+	</div>
+	<div id="dv5" align="center">
+		<img src="eu/eu4.jpg" width="600px" height="300px">
+
+	</div>
+	
+	<div id="dv6" align="center">
+		<img src="eu/eu5.jpg" width="600px" height="300px">
+
+	</div >
+	
+	<div id="dv7" align="center">
+		<img src="eu/eu6.jpg" width="600px" height="300px">
+
+	</div>
+
+</body>
+</html>
